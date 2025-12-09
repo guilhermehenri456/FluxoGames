@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluxo Games - Acesso</title>
+    <link rel="stylesheet" href="/static/login.css" />
+</head>
+
+<body>
+    <main class="card" aria-label="Fluxo Games - branding com acesso">
+
+        <section class="logo-area">
+            <div class="logo" aria-label="Fluxo Games Logo">
+                <div class="logo-icon" aria-label="Ícone de Fluxo">🎮</div>
+                <div>
+                    <div class="brand-name">Fluxo Games</div>
+                    <div class="tagline">Gere fluxos, jogue com estilo</div>
+                </div>
+            </div>
+
+            <p style="color:var(--text-dim); max-width: 520px;">
+                Fluxo Games é a sua fonte de entretenimento com experiência inovadora em jogos digitais.
+            </p>
+
+
+        </section>
+
+        <section class="visual" aria-label="Imagem ilustrativa de jogos Fluxo Games">
+            <div class="visual-content">
+                <h2>Fluxo de Ação</h2>
+                <p>Experiência imersiva com gráficos modernos</p>
+            </div>
+        </section>
+
+        <section aria-label="Área de acesso" class="auth" style="grid-column: 2 / span 1;">
+            <h3>Acesso</h3>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="{{ url_for('login') }}" method="POST" class="form" id="loginForm">
+                <div class="row">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="exemplo@domínio.com" required />
+                </div>
+
+                <div class="row">
+                    <label for="loginPass">Senha</label>
+                    <input type="password" id="loginPass" name="password" placeholder="Sua senha" required />
+                </div>
+
+                <div class="actions">
+                    <button class="btn primary" type="submit">Entrar</button>
+                    <a href="{{ url_for('cadastro_usuario') }}" class="btn secondary">Cadastre-se</a>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

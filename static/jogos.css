@@ -1,0 +1,215 @@
+/* ===============================
+   Fonte cursiva estilosa
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ===============================
+   Variáveis de cores
+================================= */
+:root {
+  /* Paleta roxo neon + alto contraste */
+  --bg: #0A0A1F;          /* Fundo muito escuro */
+  --card-bg: #251B44;     /* Cards roxo profundo */
+  --primary: #D36EFF;     /* Roxo neon mais intenso para títulos */
+  --accent: #00FFE0;      /* Neon ciano para hover e detalhes */
+  --text: #FFFFFF;        /* Texto principal */
+  --text-dim: #C0C0D0;    /* Texto secundário */
+}
+
+/* ===============================
+   Reset e corpo
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pacifico', cursive, "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Topbar
+================================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(35, 25, 60, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+  font-family: 'Pacifico', cursive;
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s, text-shadow 0.2s;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.menu a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+
+/* ===============================
+   Container principal
+================================= */
+.container {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  font-family: 'Pacifico', cursive;
+}
+
+.subtitulo {
+  color: var(--text-dim);
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* ===============================
+   Grade de jogos
+================================= */
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===============================
+   Cards de jogos
+================================= */
+.card-jogo {
+  background: var(--card-bg);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(211, 110, 255, 0.4); /* brilho roxo */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-jogo:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(211, 110, 255, 0.7), 0 0 15px var(--accent);
+}
+
+.card-jogo img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  filter: brightness(1.05);
+}
+
+.card-jogo .conteudo {
+  padding: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card-jogo h2 {
+  color: var(--primary);
+  font-size: 20px;
+  margin-bottom: 4px;
+  text-shadow: 0 0 6px var(--primary);
+  font-family: 'Pacifico', cursive;
+}
+
+.card-jogo p {
+  font-size: 14px;
+  color: var(--text-dim);
+  flex-grow: 1;
+}
+
+/* ===============================
+   Botão
+================================= */
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(211, 110, 255, 0.5);
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #0A0A1F;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px var(--accent);
+}
+
+/* ===============================
+   Rodapé
+================================= */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: rgba(35, 25, 60, 0.95);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-top: 40px;
+  text-shadow: 0 0 3px #000;
+}
+
+/* ===============================
+   Responsividade
+================================= */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  .menu a {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

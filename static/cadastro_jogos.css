@@ -1,0 +1,174 @@
+:root {
+--bg: #1a0b3a; /* Neon roxo escuro para fundo */
+  --card-bg: #220c50; /* contraste roxo para cards */
+  --primary: #8a2be2; /* roxo neon */
+  --accent: #ff00ff; /* pink neon */
+  --text: #e8eaf6;
+  --text-dim: #aab6cf;
+  --glow: 0 0 10px var(--primary), 0 0 20px var(--accent), 0 0 30px var(--primary);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pacifico', cursive, "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Topbar
+================================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(35, 25, 60, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+  font-family: 'Pacifico', cursive;
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s, text-shadow 0.2s;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.menu a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+
+/* ===============================
+   Container principal
+================================= */
+.container {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 24px;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(30, 144, 255, 0.6);
+}
+
+/* Formulário */
+form {
+  background: linear-gradient(145deg, rgba(22,27,46,0.95), rgba(22,27,46,0.85));
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #1B2237;
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(30,144,255,0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão */
+button {
+  margin-top: 24px;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,212,255,0.5);
+}
+
+/* Mensagem de sucesso */
+.msg-sucesso {
+  margin-top: 20px;
+  color: var(--success);
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  display: none;
+  text-shadow: 0 0 4px rgba(75,211,123,0.7);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

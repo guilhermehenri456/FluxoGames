@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --bg1: #0a0004;
+  --bg2: #20000c;
+  --blood: #ff0033;
+  --purple-dark: #7a00a8;
+  --sangue: #b30024;
+
+  --text: #ffe6e6;
+  --text-dim: #f4c2c2;
+
+  /* Glow suave */
+  --glow-blood: 0 0 4px #ff0033, 0 0 8px #ff6699;
+  --glow-purple: 0 0 4px #7a00a8, 0 0 8px #c472ff;
+  --glow-sangue: 0 0 4px #b30024, 0 0 8px #ff3366;
+
+  /* Glow intenso para hover */
+  --glow-blood-hover: 0 0 12px #ff0033, 0 0 25px #ff6699, 0 0 40px #ff99cc;
+  --glow-purple-hover: 0 0 12px #7a00a8, 0 0 25px #c472ff, 0 0 40px #dbaaff;
+  --glow-sangue-hover: 0 0 12px #b30024, 0 0 25px #ff3366, 0 0 40px #ff6699;
+}
+
+body {
+  background: radial-gradient(circle at center, var(--bg2), var(--bg1));
+  color: var(--text);
+  font-family: "Pacifico", cursive;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(40, 0, 10, 0.85);
+  border-bottom: 1px solid #ff003322;
+}
+
+.brand {
+  color: var(--blood);
+  font-size: 26px;
+  text-shadow: var(--glow-blood);
+}
+
+.menu a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.menu a:hover {
+  color: var(--blood);
+  text-shadow: var(--glow-blood-hover);
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.titulo {
+  color: var(--blood);
+  text-shadow: var(--glow-blood);
+  font-size: 40px;
+}
+
+.subtitulo {
+  color: var(--text-dim);
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 4px #ff0033;
+}
+
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.jogo-card {
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: scale(1);
+}
+
+/* Brilho normal suave */
+.jogo-card.vermelho {
+  background: #2a0005;
+  border: 2px solid var(--blood);
+  box-shadow: var(--glow-blood);
+}
+.jogo-card.roxo {
+  background: #1a0021;
+  border: 2px solid var(--purple-dark);
+  box-shadow: var(--glow-purple);
+}
+.jogo-card.sangue {
+  background: #30000d;
+  border: 2px solid var(--sangue);
+  box-shadow: var(--glow-sangue);
+}
+
+/* Intensifica brilho no hover */
+.jogo-card:hover {
+  transform: scale(1.08);
+}
+.jogo-card.vermelho:hover { box-shadow: var(--glow-blood-hover); }
+.jogo-card.roxo:hover { box-shadow: var(--glow-purple-hover); }
+.jogo-card.sangue:hover { box-shadow: var(--glow-sangue-hover); }
+
+.jogo-card img {
+  width: 80px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 6px #ff0033);
+  transition: filter 0.3s;
+}
+.jogo-card img:hover {
+  filter: drop-shadow(0 0 15px #ff6699);
+}
+
+.jogo-card h2 {
+  color: var(--blood);
+  margin-bottom: 8px;
+  text-shadow: var(--glow-blood);
+}
+
+.jogo-card p {
+  color: var(--text-dim);
+  font-size: 15px;
+  text-shadow: 0 0 4px #ff3366;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: rgba(40,0,10,0.85);
+  color: var(--text-dim);
+  font-size: 14px;
+  text-shadow: 0 0 3px #ff0033;
+}
+
+

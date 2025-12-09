@@ -1,0 +1,243 @@
+/* ===============================
+   Fonte cursiva estilosa
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ===============================
+   Variáveis de cores neon
+================================= */
+:root {
+  --primary: #d36eff;       /* Roxo neon */
+  --secondary: #6c63ff;     /* Roxo mais claro */
+  --accent: #00ffe0;        /* Neon ciano */
+  --bg: #0b1020;            /* Fundo escuro */
+  --card: #141a2b;          /* Cards profundos */
+  --text: #e8eaf6;
+  --text-dim: #b8c2d9;
+  --error: #ff6b6b;
+  --success: #4bd37b;
+}
+
+/* ===============================
+   Reset e corpo
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: radial-gradient(circle at 20% -10%, rgba(211,110,255,.2) 0%, transparent 40%),
+              radial-gradient(circle at 100% 0%, rgba(0,255,224,.1) 0%, transparent 40%),
+              var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* ===============================
+   Card principal
+================================= */
+.card {
+  width: min(1100px, 92%);
+  background: linear-gradient(135deg, rgba(20,26,43,.95), rgba(20,26,43,.85));
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(211,110,255,.5), 0 10px 40px rgba(0,255,224,.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px rgba(211,110,255,.8), 0 15px 60px rgba(0,255,224,.5);
+}
+
+/* ===============================
+   Logo area
+================================= */
+.logo-area { display: flex; flex-direction: column; gap: 18px; }
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(211,110,255,.25), rgba(108,99,255,.25));
+  border: 1px solid rgba(255,255,255,.15);
+  width: max-content;
+  text-shadow: 0 0 6px var(--accent);
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 6px #fff;
+}
+
+.brand-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  font-family: 'Pacifico', cursive;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.tagline {
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+/* ===============================
+   Visual
+================================= */
+.visual {
+  background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border-radius: 14px;
+  height: 320px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(211,110,255,.3);
+}
+
+.visual:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-image: url('https://images.unsplash.com/photo-1511512578047-dfb36704642e?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(130%);
+  opacity: .25;
+  transform: scale(1.1);
+}
+
+.visual-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.visual-content h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: var(--primary);
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.visual-content p { color: var(--text-dim); }
+
+/* ===============================
+   Formulário
+================================= */
+.auth { padding: 8px 0 0; display: grid; gap: 12px; }
+.auth h3 { font-size: 20px; margin-bottom: 8px; color: var(--primary); font-family: 'Pacifico', cursive; }
+
+.form {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.row { display: grid; gap: 6px; }
+.row label { font-size: 12px; color: var(--text-dim); }
+
+.row input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(0,0,0,.15);
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.row input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(211,110,255,.25);
+}
+
+/* ===============================
+   Botões
+================================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.15);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn.primary {
+  background: var(--primary);
+  box-shadow: 0 4px 15px rgba(211,110,255,.5);
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.25);
+  box-shadow: 0 2px 10px rgba(211,110,255,.3);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px var(--accent);
+}
+
+/* ===============================
+   Mensagens
+================================= */
+.message {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.message.error {
+  background: rgba(255,107,107,.15);
+  color: #ffd7d7;
+}
+
+.message.success {
+  background: rgba(75,211,123,.15);
+  color: #d7ffd7;
+}
+
+/* ===============================
+   Responsividade
+================================= */
+@media (max-width: 1024px) {
+  .card { grid-template-columns: 1fr; }
+  .visual { height: 260px; }
+}

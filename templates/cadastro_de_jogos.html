@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Jogos - FluxoGames</title>
+  <link rel="stylesheet" href="/static/cadastro_jogos.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎮 FluxoGames</div>
+    <nav class="menu">
+    <a href="{{ url_for('login') }}">Início</a>
+    <a href="{{ url_for('categorias') }}">Categoria</a>
+    <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    <a href="{{ url_for('cadastro_categoria') }}">Cadastro Categoria</a>
+  </nav>
+  </header>
+  <h1>Cadastro de Jogos</h1>
+
+  <form action="{{ url_for('cadastro_jogo') }}" method="post">
+    <label for="nome">Nome do Jogo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="url">URL imagem:</label>
+    <input type="text" id="url" name="url_imagem" required>
+
+    <label for="preco">Preço (R$):</label>
+    <input type="number" id="preco" name="preco" step="1" min="0" required>
+
+    <label for="data">Data de Lançamento:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" placeholder="Descreva brevemente o jogo..." required></textarea>
+
+    <button type="submit">Cadastrar Jogo</button>
+  </form>
+
+  <div class="msg-sucesso" id="msg-sucesso">✅ Jogo cadastrado com sucesso!</div>
+
+</body>
+</html>

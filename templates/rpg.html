@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos de RPG - FluxoGames</title>
+  <link rel="stylesheet" href="/static/rpg.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+      <a href="{{ url_for('login') }}">Início</a>
+      <a href="{{ url_for('jogos') }}">Catálogo</a>
+      <a href="{{ url_for('categorias') }}">Categoria</a>
+      <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">Jogos de RPG</h1>
+    <p class="subtitulo">Embarque em aventuras épicas, escolha seu destino e evolua seu personagem em mundos mágicos.</p>
+
+    <section class="grid-jogos">
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Fantasia">
+        <h2>Legendary Quest</h2>
+        <p>Explore masmorras, lute contra monstros e complete missões em um vasto mundo de fantasia.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Medieval">
+        <h2>Kingdoms & Heroes</h2>
+        <p>Construa seu reino, recrute heróis e enfrente batalhas estratégicas contra inimigos poderosos.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1052/1052373.png" alt="Dragão">
+        <h2>Dragon Saga</h2>
+        <p>Treine dragões, explore territórios místicos e torne-se o mestre de uma guilda lendária.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Aventura">
+        <h2>Shadow Realm</h2>
+        <p>Desvende segredos sombrios, lute com magias antigas e conquiste seu destino em um mundo obscuro.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

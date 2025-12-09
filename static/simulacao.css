@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --bg: #1a1a2e;        /* azul escuro/cinza */
+  --card-bg: #2e2e3f;   /* contraste */
+  --primary: #00ffcc;   /* verde suave */
+  --accent: #66ccff;    /* azul claro */
+  --text: #f0f8ff;
+  --text-dim: #aab6cf;
+  --glow: 0 0 6px var(--primary), 0 0 12px var(--accent);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at center, #2e2e3f 0%, #0d0d1f 80%);
+  color: var(--text);
+  font-family: "Pacifico", cursive;
+  line-height: 1.6;
+}
+
+/* Topo */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(46, 46, 63, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  color: var(--accent);
+  font-size: 24px;
+  text-shadow: var(--glow);
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.menu a:hover {
+  color: var(--primary);
+  text-shadow: var(--glow);
+}
+
+/* Container principal */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 40px;
+  color: var(--accent);
+  text-shadow: var(--glow);
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: var(--text-dim);
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Grade de jogos */
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.jogo-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 2px solid var(--primary);
+  padding: 25px;
+  box-shadow: 0 0 8px var(--primary);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.jogo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--primary), 0 0 25px var(--accent);
+}
+
+.jogo-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.jogo-card h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-shadow: var(--glow);
+}
+
+.jogo-card p {
+  color: var(--text);
+  font-size: 15px;
+  text-shadow: 0 0 2px rgba(255,255,255,0.2);
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: rgba(46,46,63,0.9);
+  color: var(--text-dim);
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-shadow: 0 0 3px rgba(255,255,255,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 30px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .jogo-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

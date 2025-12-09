@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Categorias - FluxoGames</title>
+  <link rel="stylesheet" href="/static/cadastro_jogos.css">
+</head>
+  <header class="topbar">
+    <div class="brand">🎮 FluxoGames</div>
+    <nav class="menu">
+    <a href="{{ url_for('login') }}">Início</a>
+    <a href="{{ url_for('categorias') }}">Categoria</a>
+    <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    <a href="{{ url_for('cadastro_jogo') }}">Cadastro Jogo</a>
+  </nav>
+  </header>
+</header>
+
+    <style>
+        body {
+            background: #0b001a;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 42px;
+            color: #ff1aff;
+            text-shadow: 0 0 10px #ff1aff;
+        }
+
+        p.sub {
+            font-size: 18px;
+            color: #caa3ff;
+            margin-bottom: 35px;
+        }
+
+        .flash-container {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .flash-msg {
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .success {
+            background: #3aeb81;
+            color: black;
+        }
+
+        .error {
+            background: #ff4d4d;
+        }
+
+        form {
+            background: #15002b;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px #ff1aff50;
+            text-align: left;
+        }
+
+        label {
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #ff1aff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #c600c6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cadastrar Nova Categoria</h1>
+    <p class="sub">Adicione novas categorias que aparecerão na listagem.</p>
+
+    <!-- MENSAGENS FLASH -->
+    <div class="flash-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, msg in messages %}
+                    <div class="flash-msg {{ category }}">
+                        {{ msg }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <form method="POST" action="{{ url_for('cadastro_categoria') }}">
+
+        <label for="nome">Nome da Categoria</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Ação" required>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="3" placeholder="Descreva a categoria..." required></textarea>
+
+        <label for="img_url">URL da Imagem</label>
+        <input type="text" id="img_url" name="img_url" placeholder="/static/acao.png" required>
+
+        <button type="submit">Cadastrar Categoria</button>
+    </form>
+
+    <footer style="margin-top: 50px; color: #aaa;">
+        © 2025 FluxoGames. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+

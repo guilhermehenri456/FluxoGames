@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+ {% bloco de conteudo %}
+ <h1> Empresas </h1>
+ <a href="{{url_for('index')}}"> Index </a>
+
+ {% for empresa in var_empresas %}

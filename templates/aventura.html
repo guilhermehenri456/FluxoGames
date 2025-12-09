@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos de Aventura - FluxoGames</title>
+  <link rel="stylesheet" href="/static/aventura.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+      <a href="{{ url_for('login') }}">Início</a>
+      <a href="{{ url_for('jogos') }}">Catálogo</a>
+      <a href="{{ url_for('categorias') }}">Categoria</a>
+      <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">Jogos de Aventura</h1>
+    <p class="subtitulo">
+      Explore mundos mágicos, enfrente desafios épicos e descubra segredos escondidos.
+    </p>
+
+    <section class="grid-jogos">
+
+      <!-- Verde Arcano -->
+      <div class="jogo-card verde">
+        <img src="https://cdn-icons-png.flaticon.com/512/1039/1039339.png" alt="Exploração">
+        <h2>Lost Realms</h2>
+        <p>Explore templos antigos, encontre artefatos esquecidos e descubra mistérios milenares.</p>
+      </div>
+
+      <!-- Azul Cristal -->
+      <div class="jogo-card azul">
+        <img src="https://cdn-icons-png.flaticon.com/512/814/814513.png" alt="Gelo">
+        <h2>Frozen Depths</h2>
+        <p>Viaje por cavernas congeladas e enfrente criaturas lendárias feitas de puro gelo mágico.</p>
+      </div>
+
+      <!-- Dourado Mágico -->
+      <div class="jogo-card dourado">
+        <img src="https://cdn-icons-png.flaticon.com/512/482/482117.png" alt="Templo">
+        <h2>Chrono Path</h2>
+        <p>Entre em templos brilhantes e atravesse eras usando portais de energia dourada.</p>
+      </div>
+
+      <!-- Roxo Mistério -->
+      <div class="jogo-card roxo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3514/3514222.png" alt="Fantasia">
+        <h2>Forest Spirits</h2>
+        <p>Uma jornada mística por florestas sombrias repletas de espíritos, magia e lendas antigas.</p>
+      </div>
+
+      <!-- Marrom Runas -->
+      <div class="jogo-card runas">
+        <img src="https://cdn-icons-png.flaticon.com/512/2972/2972178.png" alt="Aventura antiga">
+        <h2>Stone Legends</h2>
+        <p>Desvende enigmas escritos em runas e aventure-se por ruínas ancestrais de pedra viva.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+

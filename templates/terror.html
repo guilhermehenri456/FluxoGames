@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terror - FluxoGames</title>
+  <link rel="stylesheet" href="/static/terror.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+      <a href="{{ url_for('login') }}">Início</a>
+      <a href="{{ url_for('jogos') }}">Catálogo</a>
+      <a href="{{ url_for('categorias') }}">Categoria</a>
+      <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">Jogos de Terror</h1>
+    <p class="subtitulo">Prepare-se para sentir medo, tensão e escuridão como nunca antes.</p>
+
+    <section class="grid-jogos">
+
+      <div class="jogo-card vermelho">
+        <img src="https://cdn-icons-png.flaticon.com/512/599/599502.png" alt="Nightfall">
+        <h2>Nightfall</h2>
+        <p>Explore mansões amaldiçoadas e enfrente presenças que não deveriam existir.</p>
+      </div>
+
+      <div class="jogo-card roxo">
+        <img src="https://cdn-icons-png.flaticon.com/512/2769/2769675.png" alt="Shadow Fear">
+        <h2>Shadow Fear</h2>
+        <p>Corredores escuros, criaturas sombrias e uma atmosfera sufocante.</p>
+      </div>
+
+      <div class="jogo-card sangue">
+        <img src="https://cdn-icons-png.flaticon.com/512/990/990420.png" alt="Blood Maze">
+        <h2>Blood Maze</h2>
+        <p>Um labirinto vivo que se alimenta de medo — sobreviva se puder.</p>
+      </div>
+
+      <div class="jogo-card vermelho">
+        <img src="https://cdn-icons-png.flaticon.com/512/1067/1067341.png" alt="Haunted Valley">
+        <h2>Haunted Valley</h2>
+        <p>Um vale amaldiçoado cheio de espíritos vingativos e mistérios sombrios.</p>
+      </div>
+
+      <div class="jogo-card roxo">
+        <img src="https://cdn-icons-png.flaticon.com/512/619/619032.png" alt="The Possession">
+        <h2>The Possession</h2>
+        <p>Investigue casas possuídas e descubra a verdade antes que seja tarde demais.</p>
+      </div>
+
+      <div class="jogo-card sangue">
+        <img src="https://cdn-icons-png.flaticon.com/512/373/373095.png" alt="Dark Ritual">
+        <h2>Dark Ritual</h2>
+        <p>Participe de rituais proibidos e enfrente horrores que desafiam a realidade.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

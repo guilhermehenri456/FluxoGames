@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ==========================================
+   TEMA GERAL AVENTURA
+   Fundo renovado + foco em dourado
+========================================== */
+
+:root {
+    --bg1: #071b12; /* verde escuro profundo */
+    --bg2: #0f3d2e; /* floresta arcana */
+    --gold: #ffea72; /* dourado brilhante */
+    --gold-strong: #ffd000; /* dourado intenso para highlights */
+
+    --text: #e8ffe9;
+    --text-dim: #a6c8b1;
+
+    --glow-gold: 0 0 10px #ffd000,
+    0 0 20px #ffea72,
+    0 0 35px #ffd000;
+}
+
+/* ===== Fundo novo ===== */
+
+body {
+    background: radial-gradient(circle at center, var(--bg2) 0%, var(--bg1) 90%);
+    color: var(--text);
+    font-family: "Pacifico", cursive;
+    line-height: 1.6;
+}
+
+/* ===== Topo com dourado sutil ===== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(10, 40, 30, 0.85);
+    border-bottom: 1px solid rgba(255, 223, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.brand {
+    color: var(--gold);
+    font-size: 26px;
+    text-shadow: var(--glow-gold);
+}
+
+.menu a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--gold);
+    text-shadow: var(--glow-gold);
+}
+
+/* ===== Conteúdo ===== */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.titulo {
+    color: var(--gold);
+    text-shadow: var(--glow-gold);
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: var(--text-dim);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   GRID E CARDS — MESMOS MULTICORES DE ANTES
+========================================== */
+
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.jogo-card {
+    padding: 25px;
+    border-radius: 16px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Verde Arcano */
+.jogo-card.verde {
+    background: #0f3d2e;
+    border: 2px solid #00d98b;
+    box-shadow: 0 0 20px #00d98b70;
+}
+
+.jogo-card.verde:hover {
+    box-shadow: 0 0 40px #00d98b;
+}
+
+/* Azul Cristal */
+.jogo-card.azul {
+    background: #0c1d38;
+    border: 2px solid #2fd3ff;
+    box-shadow: 0 0 20px #2fd3ff70;
+}
+
+.jogo-card.azul:hover {
+    box-shadow: 0 0 40px #2fd3ff;
+}
+
+/* Dourado Mágico */
+.jogo-card.dourado {
+    background: #3d310a;
+    border: 2px solid var(--gold-strong);
+    box-shadow: 0 0 25px #ffd00070;
+}
+
+.jogo-card.dourado:hover {
+    box-shadow: 0 0 40px var(--gold-strong);
+}
+
+/* Roxo Mistério */
+.jogo-card.roxo {
+    background: #2a0040;
+    border: 2px solid #aa00ff;
+    box-shadow: 0 0 20px #aa00ff70;
+}
+
+.jogo-card.roxo:hover {
+    box-shadow: 0 0 40px #aa00ff;
+}
+
+/* Runas antigas */
+.jogo-card.runas {
+    background: #3a2410;
+    border: 2px solid #d48b4c;
+    box-shadow: 0 0 20px #d48b4c70;
+}
+
+.jogo-card.runas:hover {
+    box-shadow: 0 0 40px #d48b4c;
+}
+
+/* Ícones */
+.jogo-card img {
+    width: 80px;
+    filter: drop-shadow(0 0 12px var(--gold-strong));
+    margin-bottom: 15px;
+}
+
+.jogo-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--gold);
+    text-shadow: var(--glow-gold);
+}
+
+.jogo-card p {
+    font-size: 15px;
+    color: var(--text);
+    padding: 25px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* ===== Rodapé ===== */
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-dim);
+    background: rgba(10, 40, 30, 0.85);
+    border-top: 1px solid rgba(255, 223, 0, 0.15);
+}
+
+
+
+/* Efeito de aumento em TODOS os cards */
+.jogo-card:hover {
+    transform: scale(1.08); /* aumenta 8% */
+}
+
+
+
+
+
+
+
+
+
+
+

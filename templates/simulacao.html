@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos de Simulação - FluxoGames</title>
+  <link rel="stylesheet" href="/static/simulacao.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+      <a href="{{ url_for('login') }}">Início</a>
+      <a href="{{ url_for('jogos') }}">Catálogo</a>
+      <a href="{{ url_for('categorias') }}">Categorias</a>
+      <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">Jogos de Simulação</h1>
+    <p class="subtitulo">Construa, gerencie e explore mundos virtuais nos melhores jogos de simulação.</p>
+
+    <section class="grid-jogos">
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Fazenda">
+        <h2>Farm Life</h2>
+        <p>Administre sua fazenda, plante, colha e expanda suas terras para se tornar um magnata agrícola.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888847.png" alt="Cidade">
+        <h2>City Builder</h2>
+        <p>Construa e gerencie sua própria cidade, planejando infraestrutura, transporte e economia urbana.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png" alt="Vida">
+        <h2>Life Simulator</h2>
+        <p>Viva diferentes vidas, tome decisões importantes e veja como suas escolhas afetam o destino do personagem.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2379/2379021.png" alt="Voo">
+        <h2>Flight Academy</h2>
+        <p>Treine como piloto, voe em diferentes aeronaves e complete missões desafiadoras em diversos cenários.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Fonte Pacifico para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --bg: #0B0F1A;
+  --card-bg: #161B2E;
+  --primary: #8A2BE2; /* Roxo neon */
+  --accent: #DA70D6;  /* Rosa neon */
+  --text: #E8EAF6;
+  --text-dim: #AAB6CF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Topo */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(20, 26, 43, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent), 0 0 12px var(--primary);
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s, text-shadow 0.3s;
+}
+
+.menu a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 15px var(--primary);
+}
+
+/* Conteúdo */
+.container {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo {
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent);
+}
+
+.subtitulo {
+  color: var(--text-dim);
+  margin-bottom: 50px;
+  font-size: 18px;
+  text-shadow: 0 0 4px var(--primary);
+}
+
+/* Grade de categorias */
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Cards neon */
+.categoria-card {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 0 15px rgba(138,43,226,0.5), 0 0 20px rgba(218,112,214,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  animation: neon-glow 2s infinite alternate;
+  text-align: center;
+  color: #fff;
+}
+
+.categoria-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px var(--accent), 0 0 40px var(--primary);
+}
+
+.categoria-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 10px var(--accent));
+  transition: transform 0.3s;
+}
+
+.categoria-card:hover img {
+  transform: scale(1.1);
+}
+
+.categoria-card h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px var(--accent), 0 0 16px var(--primary);
+}
+
+.categoria-card p {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 0 0 4px rgba(255,255,255,0.3);
+}
+
+/* Neon glow animation */
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent), 0 0 30px var(--primary);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent);
+  }
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: rgba(20, 26, 43, 0.9);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-top: 60px;
+  text-shadow: 0 0 2px rgba(255,255,255,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  .menu a {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .categoria-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .categoria-card h2 {
+    font-size: 18px;
+  }
+
+  .categoria-card p {
+    font-size: 13px;
+  }
+}
+
+
+a {
+    text-decoration: none;
+}

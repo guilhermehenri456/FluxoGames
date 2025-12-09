@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+<section aria-label="Área de registro" class="auth" style="grid-column: 2 / span 1;">
+    <h3>Cadastro</h3>
+
+    <form action="{{ url_for('cadastro_usuario') }}" method="POST" class="form" id="registerForm">
+
+        <div class="row">
+            <label for="regNick">Nickname</label>
+            <input
+                    type="text"
+                    id="regNick"
+                    name="nickname"
+                    placeholder="Seu nome de jogador"
+                    required
+            />
+        </div>
+
+        <div class="row">
+            <label for="regEmail">E-mail</label>
+            <input
+                    type="email"
+                    id="regEmail"
+                    name="email"
+                    placeholder="email@dominio.com"
+                    required
+            />
+        </div>
+
+        <div class="row">
+            <label for="regPass">Senha</label>
+            <input
+                    type="password"
+                    id="regPass"
+                    name="senha"
+                    placeholder="Mínimo 6 caracteres"
+                    required
+            />
+        </div>
+
+        <div class="row">
+            <label for="regCpf">CPF</label>
+            <input
+                    type="text"
+                    id="regCpf"
+                    name="cpf"
+                    placeholder="Seu CPF (apenas números)"
+                    required
+            />
+        </div>
+
+        <div class="row">
+            <label for="regBirth">Data de Nascimento</label>
+            <input
+                    type="date"
+                    id="regBirth"
+                    name="data_nascimento"
+                    required
+            />
+        </div>
+
+        <div class="actions">
+            <button class="btn primary" type="submit">Criar Conta</button>
+            <a href="{{url_for('login')}}" class="btn secondary">Voltar ao Login</a>
+        </div>
+
+    </form>
+</section>
+</body>
+</html>

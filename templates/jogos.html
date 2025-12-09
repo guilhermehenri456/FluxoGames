@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FluxoGames - Catálogo de Jogos</title>
+    <link rel="stylesheet" href="/static/jogos.css"/>
+</head>
+<body>
+<header class="topbar">
+    <div class="brand">🎮 FluxoGames</div>
+    <nav class="menu">
+        <a href="{{ url_for('login') }}">Início</a>
+        <a href="{{ url_for('categorias') }}">Categoria</a>
+        <a href="{{ url_for('sobre_contato') }}">Contato</a>
+        <a href="{{ url_for('cadastro_jogo') }}">Cadastro Jogo</a>
+        <a href="{{ url_for('cadastro_categoria') }}">Cadastro Categoria</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="titulo">Catálogo de Jogos</h1>
+    <p class="subtitulo">Explore títulos famosos e indie de todos os gêneros!</p>
+
+    <section class="grid-jogos">
+        {% for jogo in jogos %}
+            <article class="card-jogo">
+                <img src="{{ jogo.url_img }}" height="170" width="297" alt="jogo">
+                <div class="conteudo">
+                    <h2>{{ jogo.nome_jogo }}</h2>
+                    <p>{{ jogo.descricao }}</p>
+                    <button class="btn">Ver mais</button>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
+
+
+
+
+

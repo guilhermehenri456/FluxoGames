@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sobre & Contato - FluxoGames</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sobre_contato.css') }}"/>
+</head>
+
+<body>
+<header class="topbar">
+    <div class="brand">🎮 FluxoGames</div>
+    <nav class="menu">
+        <a href="{{ url_for('login') }}">Início</a>
+        <a href="{{ url_for('jogos') }}">Catálogo</a>
+        <a href="{{ url_for('categorias') }}">Categorias</a>
+        <a href="{{ url_for('cadastro_jogo') }}">Cadastro Jogo</a>
+        <a href="{{ url_for('cadastro_categoria') }}">Cadastro Categoria</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="sobre">
+        <h1 class="titulo">Sobre a Fluxo Games</h1>
+        <p class="texto">
+            A <strong>Fluxo Games</strong> é uma plataforma dedicada aos apaixonados por jogos digitais.
+            Nosso objetivo é reunir os melhores títulos de todos os gêneros, desde clássicos consagrados até os mais
+            inovadores jogos independentes.
+        </p>
+        <p class="texto">
+            Fundada por entusiastas do mundo gamer, acreditamos que jogar é mais do que diversão — é uma experiência de
+            conexão, aprendizado e criatividade.
+            Trabalhamos constantemente para oferecer um catálogo atualizado, recomendações personalizadas e um ambiente
+            visual moderno para nossa comunidade.
+        </p>
+    </section>
+
+    <section class="contato">
+        <h2 class="titulo">Entre em Contato</h2>
+        <p class="subtitulo">Tem dúvidas, sugestões ou parcerias? Fale conosco!</p>
+
+        <form class="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required/>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required/>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Escreva sua mensagem..."
+                    required
+            ></textarea>
+
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+
+        <div class="info-adicional">
+            <p><strong>Telefone:</strong> <a href="tel:+5518957829875">(+55) 18 95782-9875</a></p>
+            <p><strong>Siga-nos nas redes sociais:</strong></p>
+            <div class="redes-sociais">
+                <a href="https://instagram.com/fluxogames" target="_blank" aria-label="Instagram" class="social-link">
+                    [Instagram]
+                </a>
+                <a href="https://facebook.com/fluxogames" target="_blank" aria-label="Facebook" class="social-link">
+                    [Facebook]
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

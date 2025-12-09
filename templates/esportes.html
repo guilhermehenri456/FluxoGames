@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos de Esporte - FluxoGames</title>
+  <link rel="stylesheet" href="/static/esportes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+      <a href="{{ url_for('login') }}">Início</a>
+      <a href="{{ url_for('jogos') }}">Catálogo</a>
+      <a href="{{ url_for('categorias') }}">Categoria</a>
+      <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="titulo">Jogos de Esporte</h1>
+    <p class="subtitulo">Velocidade, estratégia e competição! Explore os melhores títulos esportivos da plataforma.</p>
+
+    <section class="grid-jogos">
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="Futebol">
+        <h2>Soccer Pro</h2>
+        <p>Viva a emoção do futebol com partidas realistas, ligas internacionais e modos de campeonato intensos.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Basquete">
+        <h2>Basket Legends</h2>
+        <p>Dribles, enterradas e partidas 3x3 rápidas. Torne-se uma lenda das quadras urbanas e internacionais.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="Corrida">
+        <h2>Speed Racers</h2>
+        <p>Corridas alucinantes em circuitos urbanos e rurais, com carros tunados e pistas desafiadoras.</p>
+      </div>
+
+      <div class="jogo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/882/882701.png" alt="Skate">
+        <h2>Extreme Skate</h2>
+        <p>Execute manobras radicais, desbloqueie pranchas e vença desafios em parques e ruas da cidade.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

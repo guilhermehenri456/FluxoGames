@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Ação - FluxoGames</title>
+    <link rel="stylesheet" href="/static/acao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="topbar">
+    <div class="brand">⚡ FluxoGames</div>
+    <nav class="menu">
+        <a href="{{ url_for('login') }}">Início</a>
+        <a href="{{ url_for('jogos') }}">Catálogo</a>
+        <a href=" {{ url_for('categorias') }}">Categoria</a>
+        <a href="{{ url_for('sobre_contato') }}">Contato</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="titulo">Jogos de Ação</h1>
+    <p class="subtitulo">Explosões, combates e adrenalina pura! Mergulhe nos melhores títulos de ação da plataforma.</p>
+
+    <section class="grid-jogos">
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2553/2553691.png" alt="FPS">
+            <h2>CyberStrike</h2>
+            <p>Entre no campo de batalha futurista e lute contra máquinas e humanos em intensos combates FPS.</p>
+        </div>
+
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Beat em Up">
+            <h2>Street Fury</h2>
+            <p>Derrote gangues nas ruas em um clássico estilo beat’em up com gráficos vibrantes e combos insanos.</p>
+        </div>
+
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924915.png" alt="Plataforma">
+            <h2>Shadow Runner</h2>
+            <p>Corra, salte e lute contra inimigos sombrios em um mundo 2D com energia neon e ritmo acelerado.</p>
+        </div>
+
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" alt="Aventura de Ação">
+            <h2>Inferno Edge</h2>
+            <p>Empunhe sua espada de energia e enfrente hordas demoníacas em um universo cybermístico cheio de
+                perigo.</p>
+        </div>
+
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2553/2553657.png" alt="Shooter">
+            <h2>Galactic Assault</h2>
+            <p>Combates espaciais épicos com armas futuristas e inimigos alienígenas.</p>
+        </div>
+
+        <div class="jogo-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922707.png" alt="Luta">
+            <h2>Rogue Warriors</h2>
+            <p>Lute sozinho ou em equipe em arenas intensas com gráficos vibrantes e combos insanos.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>© 2025 FluxoGames. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
